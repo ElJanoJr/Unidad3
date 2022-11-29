@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "759425714546",
+    "project_id": "unidad3-a49aa",
+    "storage_bucket": "unidad3-a49aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759425714546:android:7f448c0833abdd4c1df5eb",
+        "android_client_info": {
+          "package_name": "com.alejandro.unidad3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759425714546-tteukcr5bchqi9svl6q09tv09rgkk2v3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyGSfH5907_3gsgQomqEu51R1T5Gmgxlk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759425714546-tteukcr5bchqi9svl6q09tv09rgkk2v3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
