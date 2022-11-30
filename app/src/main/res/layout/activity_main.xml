@@ -78,6 +78,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BotonLogin" />
 
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/Botonregistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/modooscuro"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

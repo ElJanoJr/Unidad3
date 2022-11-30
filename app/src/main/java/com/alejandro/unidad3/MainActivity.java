@@ -18,12 +18,15 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
     Button Botonregistro;
     EditText ETCorreo, ETContraseña;
     Button BotonLogin;
+
+    FirebaseUser firebaseUser;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
     Dialog dialog;
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         ETCorreo = findViewById(R.id.ETCorreo);
         ETContraseña = findViewById(R.id.ETContraseña);
         BotonLogin = findViewById(R.id.BotonLogin);
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         firebaseAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(MainActivity.this);
         dialog = new Dialog(MainActivity.this);
@@ -47,17 +51,17 @@ public class MainActivity extends AppCompatActivity {
         BotonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String correo = ETCorreo.getText().toString();
-                String contraseña = ETContraseña.getText().toString();
+                String correo1 = ETCorreo.getText().toString().trim();
+                String contraseña1   = ETContraseña.getText().toString().trim();
 
-                if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()){
+                if(!Patterns.EMAIL_ADDRESS.matcher(correo1).matches()){
                     ETCorreo.setError("Correo invalido");
                     ETCorreo.setFocusable(true);
-                }else if(contraseña.length()<7){
+                }else if(contraseña1.length()<7){
                     ETContraseña.setError("Contraseña invalida");
                     ETContraseña.setFocusable(true);
                 }else{
-                    LOGINUSUARIO(correo, contraseña);
+                    LOGINUSUARIO(correo1, contraseña1);
                 }
             }
         });
@@ -70,17 +74,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void LOGINUSUARIO(String correo, String contraseña) {
+    private void LOGINUSUARIO(String correo1, String contraseña1) {
         progressDialog.setCancelable(false);
         progressDialog.show();
-        firebaseAuth.signInWithEmailAndPassword(correo, contraseña)
+        firebaseAuth.signInWithEmailAndPassword(correo1, contraseña1)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             finish();
-
+                            progressDialog.dismiss();
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
                             startActivity(new Intent(MainActivity.this,Inicio.class));
+
 
                         }else{
                             progressDialog.dismiss();

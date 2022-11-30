@@ -107,7 +107,7 @@ public class actividadRegistrarse extends AppCompatActivity {
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(actividadRegistrarse.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(actividadRegistrarse.this, e.getMessage()    , Toast.LENGTH_SHORT).show();
                     }
                 });
 

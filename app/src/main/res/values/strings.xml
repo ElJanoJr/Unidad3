@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">Unidad 3</string>
+    <string name="app_name">Capiforo</string>
+    
+    <string name="uidtxt">Uid</string>
+    <string name="uidPerfil">--</string>
+    <string name="correotxt">Correo</string>
+    <string name="correoPerfil">--</string>
+    <string name="nombretxt">Nombres:</string>
+    <string name="nombresPerfil">--</string>
+
+
+    <string name="modooscuro">Si ves este mensaje, porfavor
+        desactiva el modo oscuro de tu telefono,
+        aun estoy en proceso de aprender</string>
+
+    <string name="unavez">¡Solo presionar una vez!
+        el proceso es lento, tenga paciencia</string>
+
+    <string name="MisDatos">Mis datos</string>
+    <string name="CrearPubli">Crear post</string>
+    <string name="PublicacionOpcion">Publicaciones</string>
+    <string name="UsuarioOpcion">Usuarios</string>
+    <string name="Salir">Cerrar sesión</string>
 </resources>

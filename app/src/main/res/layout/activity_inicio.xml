@@ -1,9 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Inicio">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/cielo"
+            android:scaleType="center"
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/FotoPerfil"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:background="#0B4c5f"
+                android:padding="3dp"
+                android:scaleType="center" />
+
+            <!--uid-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uidtxt" />
+
+                <TextView
+                    android:id="@+id/UidPerfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uidPerfil" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <!--correo-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/correotxt" />
+
+                <TextView
+                    android:id="@+id/CorreoPerfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/correoPerfil" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <!--nombre-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nombretxt" />
+
+                <TextView
+                    android:id="@+id/NombrePerfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nombresPerfil" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="20dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/datos"
+                        android:layout_gravity="center"/>
+                    <Button
+                        android:text="@string/MisDatos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/post"/>
+                    <Button
+                        android:text="@string/CrearPubli"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <!--Opcion 3 y 4-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/foro"
+                        android:layout_gravity="center"/>
+                    <Button
+                        android:id="@+id/PublicacionesOpcion"
+                        android:text="@string/PublicacionOpcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/salir"
+                        android:layout_gravity="center"/>
+                    <Button
+                        android:id="@+id/CerrarSesion"
+                        android:text="@string/Salir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <!--menu-->
+
+        <!--Opcion 1 y 2-->
+
+    </RelativeLayout>
+
+
+</ScrollView>

@@ -92,6 +92,25 @@
         android:background="@drawable/button_border"
         app:layout_constraintTop_toBottomOf="@+id/Apellido" />
 
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/Contraseña"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="(La contraseña debe tener 7 digitos)"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/BtnCrear"
+        android:text="@string/unavez"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
